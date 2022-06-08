@@ -3,8 +3,8 @@
 
 matrix::matrix(int size)
 {
-    m = size;
-    n = size;
+    _m = size;
+    _n = size;
 
     elements = new double *[m];
     for (int i = 0; i < m; i++)
@@ -15,8 +15,8 @@ matrix::matrix(int size)
 
 matrix::matrix(int height, int width)
 {
-    m = height;
-    n = width;
+    _m = height;
+    _n = width;
 
     elements = new double *[m];
     for (int i = 0; i < m; i++)

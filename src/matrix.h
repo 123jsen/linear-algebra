@@ -3,12 +3,16 @@
 class matrix
 {
     // private properties
-    int m;
-    int n;
+    int _m;
+    int _n;
 
 public:
     // public properties
     double **elements;
+
+    // getters, see https://stackoverflow.com/questions/5424042/class-variables-public-access-read-only-but-private-access-read-write
+    const int& m = _m;
+    const int& n = _n;
 
     // constructors
     matrix(int size = 3);
