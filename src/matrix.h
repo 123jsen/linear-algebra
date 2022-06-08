@@ -21,5 +21,7 @@ public:
     // instance methods
     void print_matrix();
     void to_zero();
+    void to_ones();
+    void to_uniform(double low = 0, double high = 1);
     matrix transpose();
 };

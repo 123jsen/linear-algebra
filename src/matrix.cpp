@@ -27,6 +27,7 @@ matrix::matrix(int height, int width)
 
 void matrix::print_matrix()
 {
+    std::cout << "print_matrix: size=(" << m << "," << n << ")" << std::endl;
     for (int i = 0; i < m; i++)
     {
         for (int j = 0; j < n; j++)
@@ -40,6 +41,21 @@ void matrix::to_zero()
     for (int i = 0; i < m; i++)
         for (int j = 0; j < n; j++)
             elements[i][j] = 0;
+}
+
+void matrix::to_ones()
+{
+    for (int i = 0; i < m; i++)
+        for (int j = 0; j < n; j++)
+            elements[i][j] = 1;
+}
+
+void matrix::to_uniform(double low, double high)
+{
+    // Depends on random generation
+    for (int i = 0; i < m; i++)
+        for (int j = 0; j < n; j++)
+            elements[i][j] = (double)rand() / RAND_MAX * (high - low) + low;
 }
 
 matrix matrix::transpose()

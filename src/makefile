@@ -3,7 +3,7 @@
 # make dev    		# create sandbox file that is not commited to git
 
 CC := g++ -Wall					# compiler to be used
-files: matrix.o linpack.o 		# list of object files
+files := matrix.o linpack.o 		# list of object files
 
 dev: ${files}
 	${CC} matrix.o linpack.o dev.cpp -o dev
