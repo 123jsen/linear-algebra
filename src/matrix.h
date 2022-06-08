@@ -1,3 +1,5 @@
+#pragma once
+
 class matrix
 {
     // private properties
@@ -9,10 +11,11 @@ public:
     double **elements;
 
     // constructors
-    matrix(int size);
+    matrix(int size = 3);
     matrix(int height, int width);
 
     // instance methods
     void print_matrix();
     void to_zero();
+    matrix transpose();
 };

@@ -25,17 +25,29 @@ matrix::matrix(int height, int width)
     to_zero();
 }
 
-void matrix::print_matrix() {
-    for (int i = 0; i < m; i++) {
+void matrix::print_matrix()
+{
+    for (int i = 0; i < m; i++)
+    {
         for (int j = 0; j < n; j++)
             std::cout << elements[i][j] << " ";
         std::cout << std::endl;
     }
-        
 }
 
-void matrix::to_zero() {
+void matrix::to_zero()
+{
     for (int i = 0; i < m; i++)
         for (int j = 0; j < n; j++)
             elements[i][j] = 0;
+}
+
+matrix matrix::transpose()
+{
+    matrix t_matrix(n, m);
+    for (int i = 0; i < m; i++)
+        for (int j = 0; j < n; j++)
+            t_matrix.elements[j][i] = elements[i][j];
+
+    return t_matrix;
 }
